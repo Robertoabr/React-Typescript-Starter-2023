@@ -2,7 +2,7 @@ import './styles.css';
 import testImage from './images/Logo-Test.png';
 import testSvg from './images/test.svg';
 
-const unused = 3;
+const unused = 2;
 
 export const App = () => {
   return (
