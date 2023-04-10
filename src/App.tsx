@@ -1,5 +1,5 @@
 import './styles.css';
-import testImage from './images/Logo-test.png';
+import testImage from './images/Logo-Test.png';
 import testSvg from './images/test.svg';
 
 export const App = () => {
