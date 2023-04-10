@@ -7,6 +7,7 @@
     "prepare": "husky install",
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "try_build": "cd ./build && npx serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
@@ -23,6 +24,7 @@
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
+    "@babel/runtime": "^7.21.0",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
