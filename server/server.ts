@@ -2,7 +2,7 @@ import Hapi from '@hapi/hapi';
 import { router } from './router';
 
 export const server = Hapi.server({
-  port: 8000,
+  port: 5000,
   host: 'localhost'
 });
 

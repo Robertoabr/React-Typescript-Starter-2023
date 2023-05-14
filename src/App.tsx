@@ -1,15 +1,14 @@
 import './styles.css';
-import testImage from './images/Logo-Test.png';
-import testSvg from './images/test.svg';
+import { Base } from './components/Base/base.tsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+// Create a client
+const queryClient = new QueryClient();
 
 export const App = () => {
   return (
-    <>
-      <h1>
-        React Typescript App - {process.env.NODE_ENV} {process.env.name}
-      </h1>
-      <img src={testImage} alt="Logo" width="300" height="200"></img>
-      <img src={testSvg} alt="Logo" width="300"></img>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <Base />
+    </QueryClientProvider>
   );
 };
