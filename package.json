@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
+    "startDev": "webpack serve --config webpack/webpack.config.js --env env=dev",
+    "start": "concurrently 'npm run startDev' 'cd ./server && npm run serve'",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
-    "try_build": "cd ./build && npx serve",
+    "test_build_locally": "cd ./build && npx serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
